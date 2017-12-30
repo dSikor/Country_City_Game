@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 
 public class GameRound {
 
@@ -100,6 +102,10 @@ public class GameRound {
 	}
 	
 	
+	public void wyswietlOkienkoZPoprawnymiOdpowiedziami()
+	{
+		JOptionPane.showMessageDialog(null, "Zdoby³aœ/eœ nastêpuj¹c¹ liczbê punktów : "+getIloscPoprawnychOdpowiedzi());
+	}
 	
 	public boolean sprawdzOdpowiedz(String nazwaPliku, int identyfikatorKategorii)
 	{
@@ -113,7 +119,7 @@ public class GameRound {
 		     
 		    	if(line.equals(odpowiedzi.get(identyfikatorKategorii)))
 		    	{
-		    		System.out.println(line);
+		    		
 		    		return true; 
 		    	}	
 		    }
