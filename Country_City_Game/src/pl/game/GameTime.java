@@ -24,8 +24,6 @@ public class GameTime {
 		if(okienko.getCzas()==0) JOptionPane.showMessageDialog(null,"Nie wprowadzono czasu!!!");
 		else czas=okienko.getCzas();
 				
-		System.out.println("no to czas rozgrywki to"+czas);
-				
 	}
 	
 	public int getCzas() {
