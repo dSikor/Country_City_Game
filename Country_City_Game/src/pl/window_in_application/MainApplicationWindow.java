@@ -215,8 +215,9 @@ public class MainApplicationWindow {
 					
 				}
 
-				System.out.println(round_1.getIloscPoprawnychOdpowiedzi());
-											
+				round_1.wyswietlOkienkoZPoprawnymiOdpowiedziami();
+				
+				
 			}
 		});
 		GroupLayout groupLayout = new GroupLayout(frameGame.getContentPane());
