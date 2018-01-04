@@ -75,7 +75,7 @@ public class GameRound {
 	
 	public void wylosujiUstawLiterke()
 	{
-		litera.losujLitere('A','z');		
+		litera.losujLitere('A','Z');//zmiana		
 	}
 	
 	public void podajCzasRozgrywki()
