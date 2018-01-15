@@ -30,12 +30,12 @@ public class MainApplicationWindow {
 	private JLabel lblTime;
 	
 	static Point perfectLocation = new Point(350,100);
+	static Point locationOfMainWindow = new Point(350,150);
 	private JButton buttonStartOfCountdown;
 	GameRound round_1;
 		
 	public static void main(String[] args) {
-		
-						
+										
 				FrameWelcome Frame1WithTitle=new FrameWelcome();	
 				Frame1WithTitle.setLocation(perfectLocation);
 				Frame1WithTitle.setVisible(true);
@@ -47,10 +47,10 @@ public class MainApplicationWindow {
 					e1.printStackTrace();
 				}
 				Frame1WithTitle.dispose();
-				
+								
 				MainApplicationWindow window1 = new MainApplicationWindow();
 				window1.frameGame.setVisible(true);
-				
+								
 	}
 
 	public MainApplicationWindow() {
@@ -113,7 +113,7 @@ public class MainApplicationWindow {
 			
 		public void actionPerformed(ActionEvent arg0) {
 						
-			round_1.wylosujiUstawLiterke();
+			round_1.wylosujiUstawLiterke(frameGame);
 			
 			
 			}
@@ -134,11 +134,7 @@ public class MainApplicationWindow {
 			round_1.ustawCzasRozgrywki();					
 			int liczba=round_1.getCzas();
 		
-			Task_CountdownOfTime LicznikCzasu = new Task_CountdownOfTime(liczba,lblTime,editTextWithAnswer);
-			
-			
-			
-			
+			Task_CountdownOfTime LicznikCzasu = new Task_CountdownOfTime(liczba,lblTime,editTextWithAnswer);		
 			LicznikCzasu.start();
 				
 			}
@@ -215,7 +211,7 @@ public class MainApplicationWindow {
 					
 				}
 
-				round_1.wyswietlOkienkoZPoprawnymiOdpowiedziami();
+				round_1.wyswietlOkienkoZPoprawnymiOdpowiedziami(frameGame);
 				
 				
 			}
@@ -299,7 +295,7 @@ public class MainApplicationWindow {
 		frameGame.getContentPane().setLayout(groupLayout);
 		frameGame.setSize(Frame.WIDTH,Frame.HEIGHT);
 		
-		frameGame.setLocation(perfectLocation);
+		frameGame.setLocation(locationOfMainWindow);
 		frameGame.pack();
 	}
 }
