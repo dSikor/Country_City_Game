@@ -36,6 +36,13 @@ public class GameRound {
 						
 	}
 	
+	public void setWyzerujLiczbePunktow()
+	{
+		this.iloscPoprawnychOdpowiedzi=0;
+		this.iloscBlednychOdpowiedzi=0;
+	}
+	
+	
 	public void setZwiekszLiczbeBlednychOdpowiedzi() {
 		this.iloscBlednychOdpowiedzi = iloscBlednychOdpowiedzi+1;
 	}
