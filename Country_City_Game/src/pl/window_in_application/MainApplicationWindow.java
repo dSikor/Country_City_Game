@@ -114,15 +114,15 @@ public class MainApplicationWindow {
 		public void actionPerformed(ActionEvent arg0) {
 						
 			round_1.wylosujiUstawLiterke(frameGame);
-			
-			
+					
 			}
 		});
 		
 		buttonStartOfCountdown = new JButton("Start");
 		buttonStartOfCountdown.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+				
+				round_1.setWyzerujLiczbePunktow();
 				List<JTextField> editTextWithAnswer = new ArrayList<JTextField>();  
 				editTextWithAnswer.add(edit_textField_Country);
 				editTextWithAnswer.add(edit_textField_Town);
