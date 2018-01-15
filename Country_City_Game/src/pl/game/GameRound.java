@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
@@ -17,8 +18,7 @@ public class GameRound {
 	GameTime czas;
 	int iloscPoprawnychOdpowiedzi;
 	int iloscBlednychOdpowiedzi;
-	
-		
+			
 	public GameRound() {
 				
 		odpowiedzi= new ArrayList<>();	
@@ -30,14 +30,11 @@ public class GameRound {
 				
 		litera=new DrawnLetter();
 		czas=new GameTime();
-		
-		
+			
 		iloscPoprawnychOdpowiedzi=0;
 		iloscBlednychOdpowiedzi=0;
-		
-				
+						
 	}
-	
 	
 	public void setZwiekszLiczbeBlednychOdpowiedzi() {
 		this.iloscBlednychOdpowiedzi = iloscBlednychOdpowiedzi+1;
@@ -65,17 +62,14 @@ public class GameRound {
 	public int getCzas() {
 		return czas.getCzas();
 	}
-	
-	
-	
+		
 	public void setLitera(DrawnLetter litera) {
 		this.litera = litera;
 	}	
-	
-	
-	public void wylosujiUstawLiterke()
+		
+	public void wylosujiUstawLiterke(JFrame n)
 	{
-		litera.losujLitere('A','Z');//zmiana		
+		litera.losujLitere(n,'A','Z');//zmiana		
 	}
 	
 	public void podajCzasRozgrywki()
@@ -102,9 +96,9 @@ public class GameRound {
 	}
 	
 	
-	public void wyswietlOkienkoZPoprawnymiOdpowiedziami()
+	public void wyswietlOkienkoZPoprawnymiOdpowiedziami(JFrame windowToSetLocation)
 	{
-		JOptionPane.showMessageDialog(null, "Zdoby³aœ/eœ nastêpuj¹c¹ liczbê punktów : "+getIloscPoprawnychOdpowiedzi());
+		JOptionPane.showMessageDialog(windowToSetLocation,"Zdoby³aœ/eœ nastêpuj¹c¹ liczbê punktów : "+getIloscPoprawnychOdpowiedzi(),"Wynik",JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public boolean sprawdzOdpowiedz(String nazwaPliku, int identyfikatorKategorii)
